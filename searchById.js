@@ -9,7 +9,6 @@ const findQueenById = (id) => {
   })
 
     return `${findById['name']} placed ${findById['seasons'][0]['place']} in Season ${findById['seasons'][0]['seasonNumber']} of RuPaul's Drag Race.`
-    // again with the [0], feels more hard coded to me
 
 }
 
