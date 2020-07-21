@@ -5,18 +5,16 @@
 
   
 const findTopThree = () => {
-  // might not be optimal right away 
-  const topThree = {};
 
-  //sort queens by place 
-  // pull top three into object 
-  const ranking = queens.sort((queenA, queenB) =>{
-    return queenA['seasons'][0]['place'] - queenB['seasons'][0]['place']; 
-  })
+  const topThree = {};
   
-  const first = topThree['firstPlace'] = ranking[0]['name'];
-  const second = topThree['secondPlace'] = ranking[1]['name'];
-  const third = topThree['thirdPlace'] = ranking[2]['name'];
+  const ranking = queens.sort((queenA, queenB) => {
+    return queenA.seasons[0].place - queenB.seasons[0].place; 
+  })
+
+  topThree['firstPlace'] = ranking[0]['name'];
+  topThree['secondPlace'] = ranking[1]['name'];
+  topThree['thirdPlace'] = ranking[2]['name'];
 
   return topThree; 
 }
