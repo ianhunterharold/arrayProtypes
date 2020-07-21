@@ -1,17 +1,10 @@
 // / 2. Write a fuction that returns the name of Miss Congeniality
 
-findMissCong()
-
 const findMissCong = () => {
 
-  const congenial = queens.filter(person => {
-    if (person['missCongeniality'] === true){
-      return person;
-    }
-  })
+  const congenial = queens.find(person => person['missCongeniality'] === true);
+  return congenial['name'];
 
-  return congenial[0]['name'];
-  
 
 }
 findMissCong();
