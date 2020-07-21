@@ -1,17 +1,12 @@
   //1.  Write a function that returns an array of queen names in alphabetical order.
 
-// sortFirstNames()
 
 const sortQueensByNames = () => {
- 
-    const names = queens.map(currentValue => {
-      return currentValue['name'];
-    })
-   
-   return names.sort();
-    
-  }
-  sortQueensByNames();
+
+  return queens.map(queen => queen.name).sort();
+  
+}
+sortQueensByNames();
 
 
 const queens = [
