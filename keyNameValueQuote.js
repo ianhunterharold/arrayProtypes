@@ -3,14 +3,11 @@
 //   Roxxy: "Roxxy's Quote",
 //   Detox: "Detox's Quote"}
 
-
 const queenQuotesV2 = () => {
- 
+  
   const queensAndQuotes = {};
 
-  const namesAndQuotes = queens.map(queen => {
-    return queensAndQuotes[queen['name']] = queen['quote'];
-  })
+  const namesAndQuotes = queens.map(queen => queensAndQuotes[queen.name] = queen.quote);
 
   return queensAndQuotes;
 }
