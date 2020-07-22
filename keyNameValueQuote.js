@@ -4,11 +4,10 @@
 //   Detox: "Detox's Quote"}
 
 const queenQuotesV2 = () => {
-  
-  const queensAndQuotes = {};
-
-  const namesAndQuotes = queens.map(queen => queensAndQuotes[queen.name] = queen.quote);
-
-  return queensAndQuotes;
+  const namesAndQuotes = queens.reduce((accumulator, queen) =>{
+    const {name, quote } = queens;
+    accumulator[name] = quote;
+    return accumulator;
+  },{})
 }
 queenQuotesV2();
