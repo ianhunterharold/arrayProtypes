@@ -4,17 +4,17 @@
 // Extension: Make sure the object is in that exact order
 
   
-const findTopThree = () => {
-
-  const topThree = {};
   
-  const ranking = queens.sort((queenA, queenB) => {
-    return queenA.seasons[0].place - queenB.seasons[0].place; 
-  })
+const findTopThree = () => {
+  
+  const findQueenNameByPlace = (place) => queens.find(queen => queen.seasons[0].place === place).name;
 
-  topThree['firstPlace'] = ranking[0]['name'];
-  topThree['secondPlace'] = ranking[1]['name'];
-  topThree['thirdPlace'] = ranking[2]['name'];
+  const topThree = {
+    firstPlace: findQueenNameByPlace(1),
+    secondPlace: findQueenNameByPlace(2),
+    thirdPlace: findQueenNameByPlace(3)
+  }
+  // we know that place 1,2,3 exist but not a flexible solution as is if there is not a consecutive ordered winner.
 
   return topThree; 
 }
