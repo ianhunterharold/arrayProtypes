@@ -2,7 +2,7 @@
 
 const findMissCong = () => {
 
-  const congenial = queens.find(person => person.missCongeniality === true);
+  const congenial = queens.find(person => person.missCongeniality);
 
   return congenial.name;
 }
