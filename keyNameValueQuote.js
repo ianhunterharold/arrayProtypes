@@ -4,10 +4,9 @@
 //   Detox: "Detox's Quote"}
 
 const queenQuotesV2 = () => {
-  const namesAndQuotes = queens.reduce((accumulator, queen) =>{
-    const {name, quote } = queens;
-    accumulator[name] = quote;
-    return accumulator;
-  },{})
+  return queens.reduce((acc, queen) =>{
+    const {name, quote } = queen;
+    acc[name] = quote;
+    return acc;
+},{})
 }
-queenQuotesV2();
